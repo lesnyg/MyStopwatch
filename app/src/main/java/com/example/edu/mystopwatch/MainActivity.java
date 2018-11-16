@@ -43,6 +43,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 timeBuff += millisecondTime;
                 handler.removeCallbacks(runnable);
                 break;
+            case R.id.btnreset:
+                timeBuff =0;
+                startTime = 0;
+                startTime = SystemClock.uptimeMillis();
+                handler.postDelayed(runnable,0);
+                break;
+
         }}
 
         public Runnable runnable= new Runnable() {
